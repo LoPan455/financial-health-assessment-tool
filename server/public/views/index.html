@@ -1,9 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-
         <link rel="stylesheet" href="css/styles.css">
-
 
         <!-- Angular Material requires Angular.js Libraries -->
          <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
@@ -14,64 +12,42 @@
 
         <!-- UI-Router -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
         <script src ="scripts/client.js"></script>
-        <script src ="scripts/controllers/view1.controller.js"></script>
-        <script src ="scripts/controllers/view2.controller.js"></script>
-
-
-
+        <!-- <script src ="scripts/controllers/childbox.component.js"></script>
+        <script src ="scripts/controllers/rightbox.contoller.js"></script> -->
     </head>
-    <body ng-app="mdDemoApp">
+
+    <body ng-app="mdDemoApp" layout="row" flex>
+
+<!-- Side Navigation Bar -->
+
+      <md-sidenav
+        class="md-sidenav-left"
+        md-component-id="left"
+        md-is-locked-open="true"
+        md-whiteframe="4">
+
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">Navigation Menu</h1>
+      </md-toolbar>
+      <md-content layout-padding ng-controller="SideNav">
+        <md-list>
+          <li><a ui-sref="basicProfile">Basic Profile</a></li>
+          <li><a ui-sref="budget">Budget</a></li>
+          <li>Balance Sheet</li>
+          <li>Credit Report</li>
+          <li>Summary</li>
+        </md-list>
+        <md-button ng-click="close()" class="md-primary" hide-gt-md>
+          Close (non-functional)
+        </md-button>
+      </md-content>
+    </md-sidenav>
+<!-- Main Content View -->
       <div>
-        <h1>This is the body</h1>
-
-        <div ng-controller="DemoCtrl as demo" layout="column" ng-cloak class="md-inline-form">
-          <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
-            <div>
-              <p>demo.user is: {{demo.user}}</p>
-              <md-input-container>
-                <label>Title</label>
-                <input ng-model="demo.user.title">
-              </md-input-container>
-
-              <md-input-container>
-                <label>Email</label>
-                <input ng-model="demo.user.email" type="email">
-              </md-input-container>
-
-              <md-input-container class="md-block" flex-gt-sm>
-                <label>First name</label>
-                <input ng-model="demo.user.firstName">
-              </md-input-container>
-
-              <md-input-container class="md-block" flex-gt-sm>
-                <label>Last Name</label>
-                <input ng-model="demo.user.lastName">
-              </md-input-container>
-
-              <md-switch ng-model="demo.user.married" aria-label="Switch 1">
-                Are you married?
-              </md-switch>
-
-              <md-input-container>
-                <label>Credit Products</label>
-                    <md-select ng-model="demo.user.creditProducts" placeholder="Credit Products" class="md-no-underline">
-                     <md-option value="credit-card">Credit Card</md-option>
-                     <md-option value="heloc">HELOC</md-option>
-                     <md-option value="mortgage">Mortgage</md-option>
-                     <md-option value="auto-loan">Auto Loan</md-option>
-                 </md-select>
-              </md-input-container><br />
-
-              <md-input-container>
-                <label>Salary</label>
-                <input type="number" ng-model="demo.user.salary"/>
-              </md-input-container>
-
-
-            </div>
-          </md-content>
-        </div>
+        <p>Main Content View</p>
+        <ui-view></ui-view>
       </div>
     </body>
 </html>
