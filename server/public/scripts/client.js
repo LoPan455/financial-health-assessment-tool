@@ -1,6 +1,6 @@
 console.log('client.js loaded');
 
-var app = angular.module('mdDemoApp', ['ngMaterial','ui.router']);
+var app = angular.module('fhatApp', ['ngMaterial','ui.router']);
 
 app.controller('DemoCtrl', function($scope) {
 
