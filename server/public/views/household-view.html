@@ -1,0 +1,48 @@
+<!-- <div ng-controller="DemoCtrl as demo" layout="column" ng-cloak class="md-inline-form"> -->
+  <md-content layout-gt-sm="row" layout-padding>
+    <div>
+      <p>demo.user is: {{demo.user}}</p>
+      <md-input-container>
+        <label>Title</label>
+        <input ng-model="demo.user.title">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Email</label>
+        <input ng-model="demo.user.email" type="email">
+      </md-input-container>
+
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>First name</label>
+        <input ng-model="demo.user.firstName">
+      </md-input-container>
+
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>Last Name</label>
+        <input ng-model="demo.user.lastName">
+      </md-input-container>
+
+      <md-switch ng-model="demo.user.married" aria-label="Switch 1">
+        Are you married?
+      </md-switch>
+
+      <md-input-container>
+        <label>Credit Products</label>
+            <md-select ng-model="demo.user.creditProducts" placeholder="Credit Products" class="md-no-underline">
+             <md-option value="credit-card">Credit Card</md-option>
+             <md-option value="heloc">HELOC</md-option>
+             <md-option value="mortgage">Mortgage</md-option>
+             <md-option value="auto-loan">Auto Loan</md-option>
+         </md-select>
+      </md-input-container><br />
+
+      <md-input-container>
+        <label>Salary</label>
+        <input type="number" ng-model="demo.user.salary"/>
+      </md-input-container>
+      <!-- <p>Test Icon</p>
+      <md-icon md-svg-icon="navigation:menu"   style="color: #f00;width:60px;height:60px;" aria-label="Cake Icon">
+      </md-icon> -->
+    </div>
+  </md-content>
+</div>
