@@ -17,13 +17,31 @@ app.controller('SideNav', function($scope) {
   console.log('sideNav controller running');
 })
 
+// app.component('household',{
+//   template: '<h2>This is the Household Component<h2>',
+//   controller: function(){
+//     this.testMessage = "test message for HH controller";
+//   }
+//
+// })
+
 app.config(['$mdThemingProvider','$mdIconProvider','$stateProvider',function($mdThemingProvider,$mdIconProvider,$stateProvider) {
 
   var basicProfile = {
     name: 'basicProfile',
     url: '/basicProfile',
-    templateUrl: '/views/basic-profile.html'
+    templateUrl:'/views/basic-profile.html',
+    contoller: function(){
+      console.log('basic profile controller running');
+    }
   };
+
+  var form = {
+    name: 'basicProfile.form',
+    url: '/form',
+    templateUrl: '/views/household-view.html'
+  }
+
 
   var budget = {
     name: 'budget',
@@ -31,14 +49,10 @@ app.config(['$mdThemingProvider','$mdIconProvider','$stateProvider',function($md
     template: '<h2>budget ui-route headline text</h2>'
   }
 
-  // var childBox = {
-  //   name: 'childBox',
-  //   url: '/childBox',
-  //   template: 'child-box.html'
-  // };
 
   $stateProvider.state(basicProfile);
   $stateProvider.state(budget);
+  $stateProvider.state(form);
 
 
   $mdThemingProvider
