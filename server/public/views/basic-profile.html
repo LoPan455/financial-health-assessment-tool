@@ -1,48 +1,27 @@
-<div ng-controller="DemoCtrl as demo" layout="column" ng-cloak class="md-inline-form">
-  <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
-    <div>
-      <p>demo.user is: {{demo.user}}</p>
-      <md-input-container>
-        <label>Title</label>
-        <input ng-model="demo.user.title">
-      </md-input-container>
-
-      <md-input-container>
-        <label>Email</label>
-        <input ng-model="demo.user.email" type="email">
-      </md-input-container>
-
-      <md-input-container class="md-block" flex-gt-sm>
-        <label>First name</label>
-        <input ng-model="demo.user.firstName">
-      </md-input-container>
-
-      <md-input-container class="md-block" flex-gt-sm>
-        <label>Last Name</label>
-        <input ng-model="demo.user.lastName">
-      </md-input-container>
-
-      <md-switch ng-model="demo.user.married" aria-label="Switch 1">
-        Are you married?
-      </md-switch>
-
-      <md-input-container>
-        <label>Credit Products</label>
-            <md-select ng-model="demo.user.creditProducts" placeholder="Credit Products" class="md-no-underline">
-             <md-option value="credit-card">Credit Card</md-option>
-             <md-option value="heloc">HELOC</md-option>
-             <md-option value="mortgage">Mortgage</md-option>
-             <md-option value="auto-loan">Auto Loan</md-option>
-         </md-select>
-      </md-input-container><br />
-
-      <md-input-container>
-        <label>Salary</label>
-        <input type="number" ng-model="demo.user.salary"/>
-      </md-input-container>
-      <!-- <p>Test Icon</p>
-      <md-icon md-svg-icon="navigation:menu"   style="color: #f00;width:60px;height:60px;" aria-label="Cake Icon">
-      </md-icon> -->
+  <md-content class="md-padding" flex>
+    <md-nav-bar
+      md-selected-nav-item="currentNavItem"
+      nav-bar-aria-label="navigation links">
+      <md-nav-item md-nav-sref="basicProfile.form" name="page1">
+        Our Test Form
+      </md-nav-item>
+      <md-nav-item md-nav-click="goto('page2')" name="page2">
+        Page Two
+      </md-nav-item>
+      <md-nav-item md-nav-click="goto('page3')" name="page3">
+        Page Three
+      </md-nav-item>
+      <!-- these require actual routing with ui-router or ng-route, so they
+      won't work in the demo
+      <md-nav-item md-nav-href="#page4" name="page5">Page Four</md-nav-item>
+      <md-nav-item md-nav-sref="app.page5" name="page4">Page Five</md-nav-item>
+      You can also add options for the <code>ui-sref-opts</code> attribute.
+      <md-nav-item md-nav-sref="page6" sref-opts="{reload:true, notify:true}">
+        Page Six
+      </md-nav-item>
+      -->
+    </md-nav-bar>
+    <div class="ext-content">
+      <ui-view></ui-view>
     </div>
   </md-content>
-</div>
