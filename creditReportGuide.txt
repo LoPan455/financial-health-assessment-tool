@@ -1,20 +1,28 @@
 
 Client Name == clientName    ***(possibly repeated data)
-Assessment Date
+Assessment Date == assessmentDate   ***(possibly repeated data)
 
-//// INFORMATION
-Is this the first Credit Report assessment created for this participant?
-❑ Yes        ❑ No*
-*If no, Is this a partial or complete update of the Credit Report assessment?
-❑ Partial update    ❑ Complete update
+//// INFORMATION == information_label
+Is this the first Credit Report assessment created for this participant? == firstCreditReportCreated_question
+	___ Yes == firstCreditReportYes_answer
+	___ No == firstCreditReportNo_answer
+*If no, Is this a partial or complete update of the Credit Report assessment? == partialOrCompleteUpdate_question
+___ Partial update == partialUpdate_answer
+___ Complete update == completeUpdate_answer
 
-//// PARTICIPANT PRESENT?
-Is the agency pulling the credit report with the participant present (in person or over the phone)?
-❑ Yes*     ❑ No
-*If yes, Does the participant see any activity on the credit report that does not belong to him/her, or does the participant see any errors on the report?     ❑ Yes        ❑ No
+//// PARTICIPANT PRESENT? == participantPresent_label
+Is the agency pulling the credit report with the participant present (in person or over the phone)? == inPerson_question
+		Yes == inPersonYes_answer
+		No == inPersonNo_answer
+*If yes, Does the participant see any activity on the credit report that does not belong to him/her, or does the participant see any errors on the report? == errorsOnReport_question
+	Yes == errorsYes_answer
+	No == errorsNo_answer
 
-//// CREDIT REPORT
+
+//// CREDIT REPORT == creditReport_label  ***(weird that this isn't at the top - maybe it should be for our app)
+
 Note to agency: Please complete the rest of this Credit Report assessment using information from the actual credit report, whether or not it is accurate.
+
 Was the organization able to pull the credit report?
 ❑ Yes, report(s) available
 ❑ No report/score available – agency could not access Business report
