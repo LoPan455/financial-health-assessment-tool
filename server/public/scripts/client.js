@@ -1,6 +1,6 @@
 console.log('client.js loaded');
 
-var app = angular.module('fhatApp', ['ngMaterial','ui.router']);
+var app = angular.module('fhatApp', ['ngMaterial','ui.router', firebase]);
 
 app.controller('DemoCtrl', function($scope) {
 
