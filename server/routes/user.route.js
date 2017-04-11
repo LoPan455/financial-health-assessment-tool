@@ -5,10 +5,15 @@ var serviceAccount = require('../firebase-service-account.json');
 var User = require('../models/user');
 var mongoose = require('mongoose');
 var mongoConnection = require('../modules/mongo-connection');
+var decoder = require('../modules/decoder.js')
+var decodedToken = 
 
 router.get('/logIn', function(req, res) {
-  console.log(decodedToken);
-  var userEmail = decodedToken.email; // creating variable which equals the decoded token email.
+  console.log('/login route hit');
+
+  console.log('/login route hit: ', req.decodedToken.email);
+  var userEmail = req.decodedToken.email; // creating variable which equals the decoded token email.
+  
   User.findOne(
     {
       email: userEmail,
@@ -23,7 +28,8 @@ router.get('/logIn', function(req, res) {
           console.log('Error if/else user query', err);
           res.sendStatus(500);
         } else {
-          res.sendStatus(200); // send is for data, status for messages.
+          console.log('successful user query', user);
+          res.send(user); // send is for data, status for messages.
         }
       }
     });

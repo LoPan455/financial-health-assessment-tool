@@ -1,15 +1,17 @@
-app.controller('LogonController', function($firebaseAuth, $http) {
+app.controller('LogonController', ['LogonFactory', function(LogonFactory) {
   console.log('LogonController');
   var self = this;
   self.message = 'LogonController message';
-
-  var auth = $firebaseAuth();
-
-  // self.firebaseUser = firebaseUser;
+  // self.loggedIn = LogonFactory.loggedIn;
 
 
-}); // Note: FOR: app.controller
+  self.logIn = function() {
+    console.log('LogIn button clicked');
+    LogonFactory.logIn();
+  }
 
-
-console.log(new Date().getFullYear() + ' logon.controller.js is run');
-// Macintosh HD/Users/PC/Desktop/Firebase-Explained-Lecture-Demos/angular-node-express-starter/node_modules/angular/angular.js
+    self.logOut = function() {
+    console.log('LogOut button clicked');
+    LogonFactory.logOut();
+  }
+}]);
