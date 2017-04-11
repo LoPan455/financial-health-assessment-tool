@@ -3,29 +3,50 @@ console.log('client.js loaded');
 var app = angular.module('fhatApp', ['ngMaterial','ui.router']);
 
 app.controller('DemoCtrl', function($scope) {
+  console.log('demo controller running');
 
   $scope.user = {};
+  // console.log($scope.user);
   $scope.employmentStatus = ['working','unemployed']
   $scope.creditProducts = ['Credit Cards' ,'Auto Loan' ,'Mortgage' ,'HELOC'];
   $scope.searchTerm;
   $scope.clearSearchTerm = function() {
     $scope.searchTerm = '';
   };
-
-  $scope.undoMarrige = function() { // NOTE: function is not responding when called,
+  $scope.assistanceArray = [];
+  $scope.undoMarrige = function() {
     console.log('mawige is what bwings us together');
-    // if ($scope.user.married == false) {
-    //   $scope.user.married = null;
-    // }else if ($scope.user.married == true) {
-    //   $scope.user.married = null;
-    //   $scope.user.individual = null;
-    // }
+    if ($scope.user.married == false) {
+      $scope.user.married = null;
+    }else if ($scope.user.married == true) {
+      $scope.user.married = null;
+      $scope.user.individual = null;
+    }
   };
+  $scope.bankSection = true;
+  $scope.hideBank = function (){
+    $scope.bankSection = !$scope.bankSection;
+  }
+
+  $scope.productSection = true;
+  $scope.hideProducts = function (){
+    $scope.productSection = !$scope.productSection;
+  }
+
+  $scope.undoVehicle = function() { // NOTE: function is not responding when called,
+    if ($scope.user.vehicle == false) {
+      $scope.user.vehicle = null;
+    }else if ($scope.user.vehicle == true) {
+      $scope.user.vehicle = null;
+      $scope.user.numberVehicles = null;
+    }
+  };
+
 
 })//end app.controller
 
 app.controller('SideNav', function($scope) {
-  console.log('sideNav controller running');
+  // console.log('sideNav controller running');
 })
 
 // app.component('household',{
