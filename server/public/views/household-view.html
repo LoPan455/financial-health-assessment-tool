@@ -1,48 +1,121 @@
 <!-- <div ng-controller="DemoCtrl as demo" layout="column" ng-cloak class="md-inline-form"> -->
-  <md-content layout-gt-sm="row" layout-padding>
-    <div>
-      <p>demo.user is: {{demo.user}}</p>
-      <md-input-container>
-        <label>Title</label>
-        <input ng-model="demo.user.title">
-      </md-input-container>
+<md-content layout-gt-sm="row" layout-padding>
+  <div>
+    <p>demo.user is: {{demo.user}}</p>
+    <!-- <div> name section - will be broken into different view
+    <md-input-container class="md-block" flex-gt-sm>
+    <label>First name</label>
+    <input ng-model="demo.user.firstName">
+  </md-input-container>
 
-      <md-input-container>
-        <label>Email</label>
-        <input ng-model="demo.user.email" type="email">
-      </md-input-container>
+  <md-input-container class="md-block" flex-gt-sm>
+  <label>Last Name</label>
+  <input ng-model="demo.user.lastName">
+</md-input-container>
+</div> -->
 
-      <md-input-container class="md-block" flex-gt-sm>
-        <label>First name</label>
-        <input ng-model="demo.user.firstName">
-      </md-input-container>
+<div ng-hide="demo.user.married == false || (demo.user.married == true && demo.user.individual != null)"> <!--Individual or Joint section -->
+  <md-radio-group ng-model="demo.user.married">
+    <h2>Are you married?</h2>
+    <md-radio-button ng-value="true">Yes</md-radio-button>
+    <md-radio-button ng-value="false">No</md-radio-button>
+  </md-radio-group>
 
-      <md-input-container class="md-block" flex-gt-sm>
-        <label>Last Name</label>
-        <input ng-model="demo.user.lastName">
-      </md-input-container>
+  <md-radio-group ng-if="demo.user.married == true" ng-model="demo.user.individual">
+    <h2>Do you share finances?</h2>
+    <md-radio-button ng-value="false">Yes</md-radio-button>
+    <md-radio-button ng-value="true">No</md-radio-button>
+  </md-radio-group>
+</div>
 
-      <md-switch ng-model="demo.user.married" aria-label="Switch 1">
-        Are you married?
-      </md-switch>
+<div ng-if="demo.user.married == false || (demo.user.married == true && demo.user.individual != null)" ng-hide="demo.user.dependents != null"> <!--Dependents section -->
+  <md-radio-group ng-model="demo.user.dependents">
+    <h2>Do you have any children or dependents?</h2>
+    <md-radio-button ng-value="true">Yes</md-radio-button>
+    <md-radio-button ng-value="false">No</md-radio-button>
+  </md-radio-group>
+  <!-- <button type="button" ng-click="undoMarrige()">nope</button> -->
+  <button type="button" ng-click="demo.user.married = null">Back</button>
+</div>
 
-      <md-input-container>
-        <label>Credit Products</label>
-            <md-select ng-model="demo.user.creditProducts" placeholder="Credit Products" class="md-no-underline">
-             <md-option value="credit-card">Credit Card</md-option>
-             <md-option value="heloc">HELOC</md-option>
-             <md-option value="mortgage">Mortgage</md-option>
-             <md-option value="auto-loan">Auto Loan</md-option>
-         </md-select>
-      </md-input-container><br />
+<!-- <md-switch ng-model="demo.user.married" aria-label="Switch 1">
+Are you married?
+</md-switch> -->
 
-      <md-input-container>
-        <label>Salary</label>
-        <input type="number" ng-model="demo.user.salary"/>
-      </md-input-container>
-      <!-- <p>Test Icon</p>
-      <md-icon md-svg-icon="navigation:menu"   style="color: #f00;width:60px;height:60px;" aria-label="Cake Icon">
-      </md-icon> -->
-    </div>
-  </md-content>
+<div ng-if="demo.user.dependents != null" ng-hide="(demo.user.employed == true || demo.user.employed == false)"> <!--Employment section -->
+  <md-radio-group ng-model="demo.user.employed">
+    <h2>Are you employed?</h2>
+    <md-radio-button ng-value="true">Yes</md-radio-button>
+    <md-radio-button ng-value="false">No</md-radio-button>
+  </md-radio-group>
+  <button type="button" ng-click="demo.user.dependents = null">Back</button>
+</div>
+
+
+<div ng-if="demo.user.employed != null"> <!--Assistance section -->
+  <md-radio-group ng-model="demo.user.assistance">
+    <h2>Do you receive assistance?</h2>
+    <md-radio-button ng-value="true">Yes</md-radio-button>
+    <md-radio-button ng-value="false">No</md-radio-button>
+  </md-radio-group>
+  <button type="button" ng-click="demo.user.employed = null">Back</button>
+
+  <div ng-if="demo.user.assistance == true" ng-model="demo.user.assistanceType"> <!--Need to figure out how to create an array of selected items -->
+    <md-checkbox md-no-ink class="md-primary">SNAP</md-checkbox>
+    <md-checkbox md-no-ink class="md-primary">SSI/SSDI</md-checkbox>
+    <md-checkbox md-no-ink class="md-primary">Child Support/Alimony</md-checkbox>
+    <md-checkbox md-no-ink class="md-primary">Workers' Comp</md-checkbox>
+    <md-checkbox md-no-ink class="md-primary">Other</md-checkbox>
+  </div>
+</div>
+
+<div ng-if="demo.user.assistance != null" ng-hide="demo.user.housing != null"> <!--Housing section -->
+  <md-radio-group ng-model="demo.user.housing">
+    <h2>Do you rent or own your home?</h2>
+    <md-radio-button ng-value="'Rent'">Rent</md-radio-button>
+    <md-radio-button ng-value="'Own'">Own</md-radio-button>
+  </md-radio-group>
+  <button type="button" ng-click="demo.user.employed = null">Back</button>
+</div>
+
+<div ng-if="demo.user.housing != null"> <!--Vehicle section -->
+  <md-radio-group ng-model="demo.user.vehicle">
+    <h2>Do you own a vehicle?</h2>
+    <md-radio-button ng-value="'Yes'">Yes</md-radio-button>
+    <md-radio-button ng-value="'No'">No</md-radio-button>
+  </md-radio-group>
+
+  <div ng-if="demo.user.vehicle == 'Yes'">
+    <h3>How many vehicles do you own?</h3>
+  <md-select ng-model="demo.user.numberVehicles" placeholder="Number of Vehicles" class="md-no-underline">
+    <md-option value=1>1</md-option>
+    <md-option value=2>2</md-option>
+    <md-option value=3>3+</md-option>
+  </md-select>
+</div>
+<button type="button" ng-click="demo.user.housing = null">Back</button>
+</div>
+
+<div ng-if="demo.user.vehicle == 'No' || demo.user.numberVehicles != null">
+<md-radio-group ng-model="demo.user.bank">
+  <h2>Have you owned a checking or savings account?</h2> <!-- consider revising to checkboxes -->
+  <md-radio-button ng-value="true">Yes</md-radio-button>
+  <md-radio-button ng-value="false">No</md-radio-button>
+</md-radio-group>
+
+<!-- <div ng-if="demo.user.bank == true">
+</div> -->
+</div>
+
+<div ng-if="demo.user.bank != null">
+  <h2>Have you used any of the following credit products?</h2>
+  <md-checkbox>Credit Card</md-checkbox>
+  <md-checkbox ng-hide="demo.user.vehicle ==='No'">Auto Loan</md-checkbox>
+  <md-checkbox ng-hide="demo.user.housing !=='Own'">Mortgage</md-checkbox>
+  <md-checkbox ng-hide="demo.user.housing ==='Rent'">HELOC</md-checkbox>
+</div>
+
+
+</div>
+</md-content>
 </div>

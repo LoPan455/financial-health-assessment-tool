@@ -3,8 +3,8 @@ FFTTM Balance Sheet assessment == balanceSheetAssessment_label
 Client Name (required) == clientName
 Assessment Date	(required) == assessmentDate
 Do you want the balance sheet to reflect just your own finances or the finances of your whole household? (Note to participants: please make sure all of your answers for this Balance Sheet assessment stay consistent with your response to this question.) == onlyYouOrWholeHousehold_question
-	___ Balance sheet reflects participant only or a household of one == onlyYou_answer
-	___ Balance sheet reflects whole household == wholeHousehold_answer
+	___ Balance sheet reflects participant only or a household of one == individual = true
+	___ Balance sheet reflects whole household == individual = false
 Is this the first balance sheet created for this participant? == firstSheetCreated_question
 	___ Yes == firstSheetYes_answer
 	___ No == firstSheetNo_answer
