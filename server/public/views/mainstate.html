@@ -1,0 +1,58 @@
+<div layout="row">
+
+
+<md-sidenav
+  nav-bar-aria-label="navigation links"
+  class="md-sidenav-left"
+  md-component-id="left"
+  md-is-locked-open="true"
+  md-whiteframe="4">
+<md-toolbar class="md-theme-indigo">
+  <h1 class="md-toolbar-tools">Financial Health Assessment</h1>
+</md-toolbar>
+<md-content layout-padding ng-controller="WelcomeController">
+  <md-list>
+    <li><a ui-sref="main.profile">Profile</a></li>
+    <li><a ui-sref="main.budget">Budget</a></li>
+    <li><a ui-sref="main.balanceSheet">Balance Sheet</a></li>
+    <li><a ui-sref="main.creditReport">Credit Report</a></li>
+    <li><a ui-sref="main.summary">Summary</a></li>
+  </md-list>
+</md-content>
+</md-sidenav>
+
+
+
+
+
+
+
+
+<div>
+  <ui-view></ui-view>
+</div>
+
+</div>
+
+
+
+<!-- <md-nav-item md-nav-sref="main.profile" name="main.profile">Profile</md-nav-item>
+<md-nav-item md-nav-sref="main.budget" name="main.budget">Budget</md-nav-item>
+<md-nav-item md-nav-sref="main.balanceSheet" name="main.balanceSheet">Balance Sheet</md-nav-item>
+<md-nav-item md-nav-sref="main.creditReport" name="main.creditReport">Credit Report</md-nav-item>
+<md-nav-item md-nav-sref="main.summary" name="main.summary">Summary</md-nav-item> -->
+
+
+<!-- <md-content class="md-padding" flex>
+  <md-nav-bar
+    nav-bar-aria-label="navigation links"
+    md-selected-nav-item="currentNavItem"
+    nav-bar-aria-label="navigation links">
+    <md-list>
+      <li><a ui-sref="main.profile">Profile</a></li>
+      <li><a ui-sref="main.budget">Budget</a></li>
+      <li><a ui-sref="main.balanceSheet">Balance Sheet</a></li>
+      <li><a ui-sref="main.creditReport">Credit Report</a></li>
+      <li><a ui-sref="main.summary">Summary</a></li>
+    </md-list>
+  </md-nav-bar> -->
