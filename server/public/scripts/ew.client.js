@@ -12,7 +12,7 @@ app.controller('DemoCtrl', function($scope) {
     $scope.searchTerm = '';
   };
 
-  $scope.undoMarrige =function() { // NOTE: function is not responding when called,
+  $scope.undoMarrige = function() { // NOTE: function is not responding when called,
     console.log('mawige is what bwings us together');
     // if ($scope.user.married == false) {
     //   $scope.user.married = null;
@@ -21,9 +21,6 @@ app.controller('DemoCtrl', function($scope) {
     //   $scope.user.individual = null;
     // }
   };
-
-  $scope.housing = {options: ['Rent', 'Own']};
-  // $scope.vehicle = {option}
 
 })//end app.controller
 

@@ -52,7 +52,7 @@ Are you married?
 </div>
 
 
-<div ng-if="demo.user.employed != null"> <!--Assistance section -->
+<div ng-if="demo.user.employed != null" ng-hide="demo.user.assistance == false|| (demo.user.vehicle == true && demo.user.assistanceType != null)"> <!--Assistance section -->
   <md-radio-group ng-model="demo.user.assistance">
     <h2>Do you receive assistance?</h2>
     <md-radio-button ng-value="true">Yes</md-radio-button>
@@ -61,11 +61,11 @@ Are you married?
   <button type="button" ng-click="demo.user.employed = null">Back</button>
 
   <div ng-if="demo.user.assistance == true" ng-model="demo.user.assistanceType"> <!--Need to figure out how to create an array of selected items -->
-    <md-checkbox md-no-ink class="md-primary">SNAP</md-checkbox>
-    <md-checkbox md-no-ink class="md-primary">SSI/SSDI</md-checkbox>
-    <md-checkbox md-no-ink class="md-primary">Child Support/Alimony</md-checkbox>
-    <md-checkbox md-no-ink class="md-primary">Workers' Comp</md-checkbox>
-    <md-checkbox md-no-ink class="md-primary">Other</md-checkbox>
+    <md-checkbox md-no-ink class="md-primary" ng-true-value="SNAP">SNAP</md-checkbox>
+    <md-checkbox md-no-ink class="md-primary" ng-true-value="SSI">SSI/SSDI</md-checkbox>
+    <md-checkbox md-no-ink class="md-primary"ng-true-value="alimony">Child Support/Alimony</md-checkbox>
+    <md-checkbox md-no-ink class="md-primary"ng-true-value="workersComp">Workers' Comp</md-checkbox>
+    <md-checkbox md-no-ink class="md-primary" ng-true-value="otherAssist">Other</md-checkbox>
   </div>
 </div>
 
@@ -78,7 +78,7 @@ Are you married?
   <button type="button" ng-click="demo.user.employed = null">Back</button>
 </div>
 
-<div ng-if="demo.user.housing != null"> <!--Vehicle section -->
+<div ng-if="demo.user.housing != null" ng-hide="demo.user.vehilce == 'No'|| demo.user.numberVehicles != null"> <!--Vehicle section -->
   <md-radio-group ng-model="demo.user.vehicle">
     <h2>Do you own a vehicle?</h2>
     <md-radio-button ng-value="'Yes'">Yes</md-radio-button>
@@ -103,16 +103,20 @@ Are you married?
   <md-radio-button ng-value="false">No</md-radio-button>
 </md-radio-group>
 
-<!-- <div ng-if="demo.user.bank == true">
-</div> -->
+<div ng-if="demo.user.bank == true">
+  <h3>Which account(s) have you used?</h3>
+    <md-checkbox ng-model="demo.user.checking">Checking Account</md-checkbox>
+    <md-checkbox ng-model="demo.user.savings">Savings Account</md-checkbox>
+</div>
+<button type="button" ng-click="demo.user.vehicles = null">Back</button>
 </div>
 
 <div ng-if="demo.user.bank != null">
   <h2>Have you used any of the following credit products?</h2>
-  <md-checkbox>Credit Card</md-checkbox>
-  <md-checkbox ng-hide="demo.user.vehicle ==='No'">Auto Loan</md-checkbox>
-  <md-checkbox ng-hide="demo.user.housing !=='Own'">Mortgage</md-checkbox>
-  <md-checkbox ng-hide="demo.user.housing ==='Rent'">HELOC</md-checkbox>
+  <md-checkbox ng-model="demo.user.creditCard">Credit Card</md-checkbox>
+  <md-checkbox ng-hide="demo.user.vehicle ==='No'" ng-model="demo.user.autoLoan">Auto Loan</md-checkbox>
+  <md-checkbox ng-hide="demo.user.housing !=='Own'" ng-model="demo.user.mortgage">Mortgage</md-checkbox>
+  <md-checkbox ng-hide="demo.user.housing ==='Rent'" ng-model="demo.user.heloc">HELOC</md-checkbox>
 </div>
 
 
