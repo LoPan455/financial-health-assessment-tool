@@ -1,17 +1,17 @@
 var express = require('express');
 var router = express.Router();
-var admin = require('firebase-admin');
-var serviceAccount = require('../firebase-service-account.json');
-var User = require('../models/user');
-var mongoose = require('mongoose');
-var mongoConnection = require('../modules/mongo-connection');
-var decoder = require('../modules/decoder.js')
-var decodedToken = 
+// var admin = require('firebase-admin');
+// var serviceAccount = require('../firebase-service-account.json');
+var UserMon = require('../models/user');
+// var mongoose = require('mongoose');
+// var mongoConnection = require('../modules/mongo-connection');
+// var decoder = require('../modules/decoder.js');
+// var decodedToken = 
 
 router.get('/logIn', function(req, res) {
   console.log('/login route hit: ', req.decodedToken.email);
   var userEmail = req.decodedToken.email; // creating variable which equals the decoded token email.
-  User.find(
+  UserMon.findOne(
     {
       email: 'tjohander@gmail.com'
     },
