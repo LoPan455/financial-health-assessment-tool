@@ -24,14 +24,14 @@ var userIsLoggedIn = false;
       firebaseUser.getToken().then(function(idToken) {
         $http({
           method: 'GET',
-          url: '/userLogIn',
+          url: '/user/logIn',
           headers: {
             id_token: idToken, // can name both sides the same but not here for clarity
             // id_token married to private-data.js file
           },
         }).then(function(response) {
           console.log('response from server: ', response);
-          userIsLoggedIn = true;
+          // userIsLoggedIn = true;
           // boolean  to show rest of app 
           // self.secretData = response.data;
         });

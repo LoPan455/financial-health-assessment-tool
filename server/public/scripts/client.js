@@ -1,6 +1,6 @@
-console.log('client.js loaded');
+console.log(new Date().getFullYear() + ' client.js loaded');
 
-var app = angular.module('fhatApp', ['ngMaterial','ui.router', firebase]);
+var app = angular.module('fhatApp', ['ngMaterial','ui.router', 'firebase']);
 
 app.controller('DemoCtrl', function($scope) {
 
@@ -14,7 +14,7 @@ app.controller('DemoCtrl', function($scope) {
 })//end app.controller
 
 app.controller('SideNav', function($scope) {
-  console.log('sideNav controller running');
+  console.log('sideNav controller running from client.js');
 })
 
 // app.component('household',{
