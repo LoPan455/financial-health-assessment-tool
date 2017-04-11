@@ -11,7 +11,7 @@ app.factory('LogonFactory', [
     // ng-if for log in
     // ng-if for accessing html page
 
-    self.logIn = function() {
+    function logIn() {
       console.log('logIn is clicked');
       auth.$signInWithPopup('google')
         .then(function(firebaseUser) {
@@ -29,9 +29,7 @@ app.factory('LogonFactory', [
           getUserEmail(idToken);
         });
       } else {
-        console.log('logged out');
-        userIsLoggedIn = false;
-        self.secretData = ' message on DOM';
+        console.log('$onAuthStateChanged logged out');
       }
     });
 
@@ -41,16 +39,16 @@ app.factory('LogonFactory', [
         url: '/user/logIn',
         headers: {
           id_token: idToken,
-        },
+        }
       }).then(function(response) {
         console.log('response from server: ', response.data);
       });
     }
 
-    self.logOut = function() {
+    function logOut() {
       console.log('logOut is clicked');
       auth.$signOut().then(function() {
-        console.log('logged out');
+        console.log('self.logOut logged out');
       });
     };
 
