@@ -4,7 +4,7 @@ myApp.controller('ProfileController', function(ClientFactory) {
 
   self.user = ClientFactory.client;
   self.assistanceSection = true;
-  self.cofirmAssistance = function(){
+  self.confirmAssistance = function(){
     self.assistanceSection = !self.assistanceSection;
   }
 

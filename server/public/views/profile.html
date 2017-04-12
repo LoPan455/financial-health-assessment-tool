@@ -51,7 +51,7 @@
           <md-checkbox md-no-ink class="md-primary" ng-model="pc.user.alimony">Child Support/Alimony</md-checkbox>
           <md-checkbox md-no-ink class="md-primary" ng-model="pc.user.workersComp">Workers' Comp</md-checkbox>
           <md-checkbox md-no-ink class="md-primary" ng-model="pc.user.otherAssist">Other</md-checkbox>
-          <button type="button" ng-click="pc.cofirmAssistance()">OK</button>
+          <button type="button" ng-click="pc.confirmAssistance()">OK</button>
         </div>
       </div>
 
@@ -61,7 +61,7 @@
           <md-radio-button ng-value="'Rent'">Rent</md-radio-button>
           <md-radio-button ng-value="'Own'">Own</md-radio-button>
         </md-radio-group>
-        <button type="button" ng-click="pc.cofirmAssistance()">Back</button>
+        <button type="button" ng-click="pc.confirmAssistance()">Back</button>
       </div>
 
       <div ng-if="pc.user.housing != null" ng-hide="pc.user.vehicle != null"> <!--Vehicle section -->
