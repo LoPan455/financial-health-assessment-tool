@@ -36,5 +36,4 @@ myApp.controller('ProfileController', function(ClientFactory) {
     }
   };
 
-
 });//end app.controller

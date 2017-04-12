@@ -98,6 +98,7 @@
         <md-checkbox ng-model="pc.user.heloc">HELOC</md-checkbox> <!--ng-hide="pc.user.housing ==='Rent'" -->
         <md-checkbox ng-model="pc.user.noCreditProducts">None of These</md-checkbox>
         <button type="button" ng-click="pc.hideProducts()">OK</button>
+        <button type="button" ng-click="pc.hideBank()">Back</button>
       </div>
 
       <div ng-if="!pc.productSection">
@@ -122,6 +123,7 @@
         <p ng-if="pc.user.autoLoan == true">-Auto Loan</p>
         <p ng-if="pc.user.mortgage == true">-Mortgage</p>
         <p ng-if="pc.user.heloc == true">-HELOC</p>
+        <button type="button" ng-click="pc.hideProducts()">Back</button>
         <button type="button">Confirm Accuracy</button>
       </div>
 

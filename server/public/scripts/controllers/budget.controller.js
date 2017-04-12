@@ -13,4 +13,5 @@ myApp.controller('BudgetController', function(ClientFactory) {
   self.secondMortgage = function (){
     self.mortgageOption = !self.mortgageOption;
   }
+
 });//end app.controller
