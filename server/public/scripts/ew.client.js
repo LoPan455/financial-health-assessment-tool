@@ -13,13 +13,17 @@ app.controller('DemoCtrl', function($scope) {
   $scope.clearSearchTerm = function() {
     $scope.searchTerm = '';
   };
-  $scope.assistanceArray = [];
+  $scope.assistanceSection = true;
+  $scope.cofirmAssistance = function(){
+    $scope.assistanceSection = !$scope.assistanceSection;
+  }
+
   $scope.undoMarrige = function() {
     console.log('mawige is what bwings us together');
-    if ($scope.user.married == false) {
-      $scope.user.married = null;
-    }else if ($scope.user.married == true) {
-      $scope.user.married = null;
+    if ($scope.user.marrigeStatus === 'single') {
+      $scope.user.marrigeStatus = null;
+    }else if ($scope.user.marrigeStatus === 'married') {
+      $scope.user.marrigeStatus = null;
       $scope.user.individual = null;
     }
   };
@@ -42,6 +46,10 @@ app.controller('DemoCtrl', function($scope) {
     }
   };
 
+$scope.mortgageOption = false;
+$scope.secondMortgage = function (){
+  $scope.mortgageOption = !$scope.mortgageOption;
+}
 
 })//end app.controller
 
