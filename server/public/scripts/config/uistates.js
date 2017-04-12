@@ -6,14 +6,20 @@ myApp.config(function($stateProvider) {
     controllerAs: 'msc',
     templateUrl: '/views/mainstate.html'
   };
+  var login = {
+    name: 'login',
+    controller: 'LoginController',
+    controllerAs: 'lc',
+    templateUrl:'/views/login.html'
+  };
   var welcome = {
     name: 'welcome',
-    controller: 'WelcomController',
+    controller: 'WelcomeController',
     controllerAs: 'wc',
     templateUrl:'/views/welcome.html'
   };
   var profile = {
-    name: 'main.profile',
+    name: 'profile',
     controller: 'ProfileController',
     controllerAs: 'pc',
     templateUrl:'/views/profile.html'
@@ -24,17 +30,17 @@ myApp.config(function($stateProvider) {
     controllerAs: 'bc',
     templateUrl:'/views/budget.html'
   };
-  var budgetOne = {
-    name: 'main.budget.one',
-    controller: 'BudgetController',
-    controllerAs: 'bc',
-    templateUrl:'/views/budgetone.html'
+  var budgetIncome = {
+    name: 'main.budget.income',
+    controller: 'BudgetIncomeController',
+    controllerAs: 'bic',
+    templateUrl:'/views/budgetincome.html'
   };
-  var budgetTwo = {
-    name: 'main.budget.two',
-    controller: 'BudgetController',
-    controllerAs: 'bc',
-    templateUrl:'/views/budgettwo.html'
+  var budgetExpenses = {
+    name: 'main.budget.expenses',
+    controller: 'BudgetExpensesController',
+    controllerAs: 'bec',
+    templateUrl:'/views/budgetexpenses.html'
   };
   var budgetThree = {
     name: 'main.budget.three',
@@ -96,12 +102,13 @@ myApp.config(function($stateProvider) {
     controllerAs: 'sc',
     templateUrl: '/views/summary.html'
   };
+  $stateProvider.state(login);
   $stateProvider.state(main);
   $stateProvider.state(welcome);
   $stateProvider.state(profile);
   $stateProvider.state(budget);
-  $stateProvider.state(budgetOne);
-  $stateProvider.state(budgetTwo);
+  $stateProvider.state(budgetIncome);
+  $stateProvider.state(budgetExpenses);
   $stateProvider.state(budgetThree);
   $stateProvider.state(balanceSheet);
   $stateProvider.state(balanceSheetOne);

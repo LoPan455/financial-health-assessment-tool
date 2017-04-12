@@ -6,7 +6,7 @@ myApp.controller('ProfileController', function(ClientFactory) {
   self.assistanceSection = true;
   self.confirmAssistance = function(){
     self.assistanceSection = !self.assistanceSection;
-  }
+  };
 
   self.undoMarrige = function() {
     // console.log('mawige is what bwings us together');
@@ -20,17 +20,17 @@ myApp.controller('ProfileController', function(ClientFactory) {
   self.bankSection = true;
   self.hideBank = function (){
     self.bankSection = !self.bankSection;
-  }
+  };
 
   self.productSection = true;
   self.hideProducts = function (){
     self.productSection = !self.productSection;
-  }
+  };
 
   self.undoVehicle = function() {
-    if (self.user.vehicle == false) {
+    if (self.user.vehicle === false) {
       self.user.vehicle = null;
-    }else if (self.user.vehicle == true) {
+    }else if (self.user.vehicle === true) {
       self.user.vehicle = null;
       self.user.numberVehicles = null;
     }
