@@ -8,4 +8,10 @@ myApp.controller('BudgetController', function(ClientFactory) {
   this.clearSearchTerm = function() {
     this.searchTerm = '';
   };
+
+  self.mortgageOption = false;
+  self.secondMortgage = function (){
+    self.mortgageOption = !self.mortgageOption;
+  }
+
 });//end app.controller
