@@ -298,29 +298,18 @@ How many active lines of credit does the participant have? __________
   <td> $
 </tr>
 
-**NOTE: above: there are 3 rows: HELOC 2, HELOC 3
-
-//// FORECLOSURE/BANKRUPTCY
-Has the participant had a foreclosure in the last 7 years?
-❑ Yes*     ❑ No
-	Date of most recent foreclosure: ___________________
-Has the participant been in bankruptcy in the last 10 years?
-❑ Yes*     ❑ No
-	Discharge date of last bankruptcy (year): _________________
-
-//// COLLECTIONS/CHARGE-OFFS
-Number of collections/charge-offs (all): ___________
-Number of collections/charge-offs (just medical collections): ____________
-
-//// CIVIL JUDGMENTS/PUBLIC RECORDS (INCLUDING TAX LIENS)
-Total number of civil judgments/public records (including tax liens): _____________
-
-//// DELINQUENCIES
-Number of lines of credit that have at least one 30-, 60-, or 90-day delinquency in the last 6 months: ____________
+(Variables) NotYet-{COPIED}
 
 
 
 
-(Variables)
-
-{COPIED}
+foreclosureLastSeven
+recentForeclosureDate
+bankruptcyLastTen
+recentBankruptcyDate
+collectionsChargeOffs-General
+collectionsChargeOffs-Medical
+civilJudgmentsPublicRecordsTaxLiens
+delinquencies30Day
+delinquencies60Day
+delinquencies90Day
