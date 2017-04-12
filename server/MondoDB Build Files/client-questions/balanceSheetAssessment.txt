@@ -185,7 +185,7 @@ balanceSheetAssessmentNotes
 	completeUpdate_answer
 
 
-
+{COPIED}
 assets_label
 	checkingBalanceValue
 	savingsBalanceValue
@@ -206,16 +206,16 @@ assets_label
 	businessValue
 	otherAssetsValue
 	totalAssets
+{COPIED}
 
-
-
+{COPIED}
 	liabilities_label
 			housingLiabilities_label
 			mortgageBalance
 			helocBalance
 			otherRealEstateBalance
 			totalHousingLiabilities
-
+{COPIED}
 					transportationLiabilities_label
 					vehicle1Balance
 					vehicle2Balance

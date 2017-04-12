@@ -15,6 +15,7 @@ app.controller('LogonController', ['LogonFactory', function(LogonFactory) {
     self.logOut = function() {
     console.log('LogOut button clicked');
     LogonFactory.logOut();
+    
   }
 
 

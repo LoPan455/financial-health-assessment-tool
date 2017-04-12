@@ -57,7 +57,7 @@
 <div ng-controller="LogonController as lc">
 
     <button ng-show="lc.user" ng-hide="lc.user.user" ng-click="lc.logIn()">Log In</button>
-    <button ng-show="lc.user" ng-click="lc.logOut()">Log Out</button>
+    <button ng-show="lc.user" ng-click="lc.logOut()" >Log Out</button>
     <p>{{lc.user.user.email}} is allowed access</p>
     
     <!--<button ng-click="lc.balanceSheet()">Add Collection</button>-->
