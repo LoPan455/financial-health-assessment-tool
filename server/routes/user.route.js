@@ -14,7 +14,7 @@ router.get('/logIn', function(req, res) {
   var userEmail = req.decodedToken.email; // creating variable which equals the decoded token email.
   UserMon.findOne(
     {
-      email: 'tjohander@gmail.com'
+      email: userEmail
     },
     function(err, user) {
       // 'email' must match db

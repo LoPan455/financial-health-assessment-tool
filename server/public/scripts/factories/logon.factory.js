@@ -6,6 +6,7 @@ app.factory('LogonFactory', [
     var userObject = {};
     var userIsLoggedIn = false;
     var auth = $firebaseAuth();
+    var loggedInUser = {};
 
     // if (idTo)
     // ng-if for log in
@@ -42,6 +43,7 @@ app.factory('LogonFactory', [
         }
       }).then(function(response) {
         console.log('response from server: ', response.data);
+        loggedInUser.user = response.data;
       });
     }
 
@@ -55,6 +57,6 @@ app.factory('LogonFactory', [
     return {
       logIn: logIn,
       logOut: logOut,
+      loggedInUser: loggedInUser
     };
-  },
-]);
+  }]);

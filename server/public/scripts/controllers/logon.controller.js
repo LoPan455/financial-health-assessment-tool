@@ -1,6 +1,8 @@
 app.controller('LogonController', ['LogonFactory', function(LogonFactory) {
   console.log('LogonController');
   var self = this;
+  self.user = LogonFactory.loggedInUser;
+
   self.message = 'LogonController message';
   // self.loggedIn = LogonFactory.loggedIn;
 
@@ -15,9 +17,5 @@ app.controller('LogonController', ['LogonFactory', function(LogonFactory) {
     LogonFactory.logOut();
   }
 
-  
-  //   var user = require('../MondoDB Build Files/balanceSheet.js');
-  //   self.balanceSheet = function() {
-  //   console.log('balanceSheet button clicked');
-  //  }
+
 }]);
