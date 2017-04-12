@@ -4,7 +4,8 @@ var router = express.Router();
 // var serviceAccount = require('../firebase-service-account.json');
 var UserMon = require('../models/user');
 // var mongoose = require('mongoose');
-// var mongoConnection = require('../modules/mongo-connection');
+var mongoConnection = require('../modules/mongo-connection');
+mongoConnection.connect();
 // var decoder = require('../modules/decoder.js');
 // var decodedToken = 
 

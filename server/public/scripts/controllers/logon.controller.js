@@ -14,4 +14,10 @@ app.controller('LogonController', ['LogonFactory', function(LogonFactory) {
     console.log('LogOut button clicked');
     LogonFactory.logOut();
   }
+
+  
+  //   var user = require('../MondoDB Build Files/balanceSheet.js');
+  //   self.balanceSheet = function() {
+  //   console.log('balanceSheet button clicked');
+  //  }
 }]);

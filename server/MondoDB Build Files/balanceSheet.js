@@ -1,5 +1,6 @@
-var connectionString = require('../database-config');
+function balanceSheetDbConnection() {
 
+var connectionString = require('../database-config');
 var MongoClient = require('mongodb').MongoClient;
 function addObject (collection, object) {
   collection.insert(object, function(err, result) {
@@ -20,8 +21,6 @@ MongoClient.connect(connectionString, function(err, db) {
   });
 setTimeout (function() { db.close(); }, 6000);
 });
-
-
-
+}
 
 console.log(new Date().getFullYear() + ' balanceSheet.js is run');
