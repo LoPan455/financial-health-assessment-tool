@@ -1,20 +1,20 @@
 var express = require('express');
 var router = express.Router();
-var UserMon = require('../models/user');
+var clientBalance = require('../models/clientBalanceSchema');
 var mongoConnection = require('../modules/mongo-connection');
 mongoConnection.connect();
 
 
-router.get('/logIn', function(req, res) {
-  console.log('/login route hit: ', req.decodedToken.email);
-  var userEmail = req.decodedToken.email; // creating variable which equals the decoded token email.
+router.get('/clientbalanceschema', function(req, res) {
+  console.log('/login route hit: ', req.decodedToken);
+  var clientBalanceSchemaToken = req.decodedToken; // creating variable which equals the decoded token email.
   
   
   
   
   UserMon.findOne(
     {
-      email: userEmail
+      name: clientName
     },
     function(err, receipt) {
       if (err) {

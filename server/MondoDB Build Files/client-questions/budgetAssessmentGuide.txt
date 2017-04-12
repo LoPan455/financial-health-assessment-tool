@@ -338,11 +338,10 @@ totalMonthlyNetIncome
 budgetAssessmentNotes
 
 
-
-
-
-
 ////////////////////////////////////////////////////
+(Variables)
+
+{COPIED}
 budgetAssessment_label
 clientName
 assessmentDate
@@ -513,3 +512,4 @@ totalMonthlyExpenses
 totalMonthlyNetIncome
 
 budgetAssessmentNotes
+{COPIED}

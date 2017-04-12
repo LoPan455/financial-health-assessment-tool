@@ -12,19 +12,18 @@ Is this the first balance sheet created for this participant? == firstSheetCreat
 			___ Partial update == partialUpdate_answer
 			___ Complete update == completeUpdate_answer
 
-(Done)
-1) clientName
-2) assessmentDate
-3) onlyYouOrWholeHousehold_question
+clientName
+assessmentDate
+onlyYouOrWholeHousehold_question
 onlyYou_answer
 wholeHousehold_answer
-4) firstSheetCreated_question
+firstSheetCreated_question
 firstSheetYes_answer
 firstSheetNo_answer
-5) partialOrCompleteUpdate_question
+partialOrCompleteUpdate_question
 partialUpdate_answer
 completeUpdate_answer
-(END Done)
+
 
 	 //// Assets == assets_label 
 
@@ -167,7 +166,7 @@ balanceSheetAssessmentNotes
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
+{COPIED}
 
 	clientName
 	assessmentDate
@@ -184,8 +183,6 @@ balanceSheetAssessmentNotes
 	partialUpdate_answer
 	completeUpdate_answer
 
-
-{COPIED}
 assets_label
 	checkingBalanceValue
 	savingsBalanceValue
@@ -206,16 +203,14 @@ assets_label
 	businessValue
 	otherAssetsValue
 	totalAssets
-{COPIED}
 
-{COPIED}
 	liabilities_label
 			housingLiabilities_label
 			mortgageBalance
 			helocBalance
 			otherRealEstateBalance
 			totalHousingLiabilities
-{COPIED}
+
 					transportationLiabilities_label
 					vehicle1Balance
 					vehicle2Balance
@@ -251,3 +246,4 @@ assets_label
 					totalLiabilities
 					totalNetWorth
 					balanceSheetAssessmentNotes
+{COPIED}
