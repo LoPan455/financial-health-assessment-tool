@@ -14,6 +14,7 @@ app.factory('LoginFactory', [
       auth.$signInWithPopup('google')
         .then(function(firebaseUser) {
           console.log('fhat authenticated as: ', firebaseUser.user.email);
+
         })
         .catch(function(error) {
           console.log('firebaseUser authentication failed: ', error);
@@ -26,6 +27,7 @@ app.factory('LoginFactory', [
         firebaseUser.getToken().then(function(idToken) {
           getUserEmail(idToken);
           $location.url('/welcome');
+
         });
       } else {
         console.log('$onAuthStateChanged logged out');
@@ -42,7 +44,6 @@ app.factory('LoginFactory', [
       }).then(function(response) {
         console.log('response from server: ', response.data);
         loggedInUser.user = response.data;
-        $location
       });
     }
 
@@ -50,6 +51,8 @@ app.factory('LoginFactory', [
       console.log('logOut is clicked');
       auth.$signOut().then(function() {
         console.log('self.logOut logged out');
+
+        $location.url('/login');
       });
     };
 
