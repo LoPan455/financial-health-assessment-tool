@@ -17,8 +17,3 @@
     width: auto; }
   .selectdemoSelectHeader md-content._md {
     max-height: 240px; }
-
-.login-screen {
-  background-image: url('../assets/blue-gradient-background-wallpaper-1.jpg');
-  background-color: blue;
-}
