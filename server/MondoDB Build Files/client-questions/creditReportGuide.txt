@@ -1,4 +1,3 @@
-
 Client Name == clientName    ***(possibly repeated data)
 Assessment Date
 
@@ -78,7 +77,6 @@ Other Bureau Non-FICO Score: ______________
 How many active lines of credit does the participant have? __________
 	How many are active installment loans? _______     How many are active revolving lines of credit? _______
 
-
 //// TABLE:   REVOLVING ACCOUNTS – ACTIVE CREDIT CARDS
 <thead>
 <tr>
@@ -99,10 +97,6 @@ How many active lines of credit does the participant have? __________
 </tr>
 
 **NOTE: above: there are 9 rows: CC2, CC3, etc. up to CC9
-
-
-
-
 
 ///// new TABLE:  REVOLVING ACCOUNTS – HOME EQUITY LINES OF CREDIT (HELOCs)
 
@@ -126,11 +120,6 @@ How many active lines of credit does the participant have? __________
 
 **NOTE: above: there are 3 rows: HELOC 2, HELOC 3
 
-
-
-
-
-
 //// FORECLOSURE/BANKRUPTCY
 Has the participant had a foreclosure in the last 7 years?
 ❑ Yes*     ❑ No
@@ -151,17 +140,13 @@ Number of lines of credit that have at least one 30-, 60-, or 90-day delinquency
 
 //// NOTES
 
-
-
-
-
-
-
-
-
-
 FFT™ is a registered mark of, and FFT™ templates are proprietary to, Local initiatives Support Corporation.  FFT™ includes certain methodology that is confidential and proprietary to Project Match-Families in Transition Association, including specifically the method by which one-time outcomes and over-time outcomes are distinguished, tracked, and entered (including, without limitation, the usage of the status codes such as “beginning”, “interim”, and “end” or terms that embody similar concepts).  You may not disseminate information pertaining to FFT™ or any component thereof (including without limitation third party methodologies) to unauthorized individuals nor embody any component of the FFT™ templates in any products or exploit the same in any way.”
 
 © Local Initiatives Support Corporation 2012. This work is protected by United States copyright law. Apart from any use as permitted by the U.S. Copyright Act, no part of this document may be reproduced, distributed, transmitted, or published without the express written permission of Local Initiatives Support Corporation. You may not alter or remove any copyright notice or proprietary legend contained in or on this document.
 
 Local Initiatives Support Corporation does not guarantee the accuracy, completeness, or usefulness of any content in this document or its fitness for any particular purpose.
+
+
+(Variables)
+
+{COPIED}

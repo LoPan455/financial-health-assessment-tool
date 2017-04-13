@@ -338,6 +338,11 @@ totalMonthlyNetIncome
 budgetAssessmentNotes
 
 
+////////////////////////////////////////////////////
+(Variables)
+
+{COPIED}
+=======
 
 
 
@@ -514,3 +519,6 @@ totalMonthlyExpenses
 totalMonthlyNetIncome
 
 budgetAssessmentNotes
+
+{COPIED}
+=======
