@@ -1,4 +1,4 @@
-myApp.config(function($stateProvider) {
+myApp.config(function($stateProvider,$urlRouterProvider) {
   var main = {
     name: 'main',
     url: '/main',
@@ -8,6 +8,7 @@ myApp.config(function($stateProvider) {
   };
   var login = {
     name: 'login',
+    url: '/login',
     controller: 'LoginController',
     controllerAs: 'lc',
     templateUrl:'/views/login.html'
@@ -119,4 +120,6 @@ myApp.config(function($stateProvider) {
   $stateProvider.state(creditReportTwo);
   $stateProvider.state(creditReportThree);
   $stateProvider.state(summary);
+
+  $urlRouterProvider.when('', '/login');
 });
