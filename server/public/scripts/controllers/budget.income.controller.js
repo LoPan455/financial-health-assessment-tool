@@ -1,4 +1,4 @@
-myApp.controller('BudgetIncomeController', function(ClientFactory) {
+fhatApp.controller('BudgetIncomeController', function(ClientFactory) {
   console.log('BudgetIncomeController controller running');
   var self = this;
 
