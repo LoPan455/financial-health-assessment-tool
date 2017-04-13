@@ -58,7 +58,6 @@ netOrGrossAndNet_question { type: Boolean },
 	totalMonthlyIncomeNet: { type: Number },
 	totalMonthlyIncomeGross: { type: Number },
 
-
 // monthlyExpenses_label
 // housing_label
 monthlyRent: { type: Number },
@@ -159,10 +158,6 @@ totalMonthlyExpenses: { type: Number },
 totalMonthlyNetIncome: { type: Number },
 
 budgetAssessmentNotes: { type: Number },
-
-
-
-	
 
 });
 

@@ -306,7 +306,7 @@ How many active lines of credit does the participant have? __________
 foreclosureLastSeven
 recentForeclosureDate
 bankruptcyLastTen
-recentBankruptcyDate
+recentBankruptcyDate: { type: Date },
 collectionsChargeOffs-General
 collectionsChargeOffs-Medical
 civilJudgmentsPublicRecordsTaxLiens
