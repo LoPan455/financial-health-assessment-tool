@@ -1,4 +1,5 @@
-fhatApp.controller('SummaryController', function(ClientFactory) {
+
+app.controller('SummaryController', function(ClientFactory) {
   console.log('SummaryController controller running');
   var self = this;
   this.user = {};

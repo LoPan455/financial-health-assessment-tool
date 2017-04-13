@@ -1,3 +1,5 @@
+
 console.log('client.js loaded');
 
-var fhatApp = angular.module('fhatApp', ['ngMaterial','ui.router']);
+
+var app = angular.module('fhatApp', ['ngMaterial','ui.router','firebase']);

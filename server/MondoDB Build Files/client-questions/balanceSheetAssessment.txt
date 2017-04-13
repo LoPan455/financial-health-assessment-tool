@@ -25,9 +25,10 @@ partialUpdate_answer
 completeUpdate_answer
 
 
+
+
 	//// Assets == assets_label
 
-		assets_label
 
 			Checking Account(s) (total balance) == checkingBalanceValue
 			Savings Account(s) (total balance) == savingsBalanceValue
@@ -167,6 +168,8 @@ balanceSheetAssessmentNotes
 
 
 
+{COPIED}
+
 
 	clientName
 	assessmentDate
@@ -183,7 +186,7 @@ balanceSheetAssessmentNotes
 	partialUpdate_answer
 	completeUpdate_answer
 
-
+=======
 
 assets_label
 	checkingBalanceValue
@@ -201,12 +204,12 @@ assets_label
 	stocksBondsAndSimilarValue
 	retirementAccountsValue
 	collegeSavingsValue
-	
+
 	businessValue
 	otherAssetsValue
 	totalAssets
 
-
+=======
 
 	liabilities_label
 			housingLiabilities_label
@@ -250,3 +253,6 @@ assets_label
 					totalLiabilities
 					totalNetWorth
 					balanceSheetAssessmentNotes
+
+{COPIED}
+=======

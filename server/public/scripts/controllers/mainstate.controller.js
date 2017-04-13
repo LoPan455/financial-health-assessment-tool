@@ -1,4 +1,6 @@
-fhatApp.controller('MainStateController', function(ClientFactory) {
+
+app.controller('MainStateController', function(ClientFactory) {
+
   console.log('MainStateController controller running');
   var self = this;
     this.user = {};

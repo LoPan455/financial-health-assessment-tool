@@ -1,4 +1,5 @@
-fhatApp.controller('ProfileController', function(ClientFactory) {
+
+app.controller('ProfileController', function(ClientFactory) {
   console.log('ProfileController controller running');
   var self = this;
 
@@ -17,9 +18,19 @@ fhatApp.controller('ProfileController', function(ClientFactory) {
       self.user.individual = null;
     }
   };
+
   self.bankSection = true;
   self.hideBank = function (){
+    if (self.user.bank === false) {
+      self.user.bank = null;
+    }else {
     self.bankSection = !self.bankSection;
+    }
+  };
+
+  self.clearAccounts = function(){
+    self.user.checking = false;
+    self.user.savings = false;
   };
 
   self.productSection = true;
