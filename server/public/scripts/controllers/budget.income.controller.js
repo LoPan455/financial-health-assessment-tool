@@ -1,5 +1,7 @@
 myApp.controller('BudgetIncomeController', function(ClientFactory) {
   console.log('BudgetIncomeController controller running');
   var self = this;
-  this.user = {};
+
+  self.user = ClientFactory.client;
+
 });//end app.controller

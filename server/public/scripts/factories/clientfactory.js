@@ -1,7 +1,6 @@
 myApp.factory('ClientFactory', ['$http', function($http) {
 
 var client = {};
-
  //  function updateClientData(newClientInfo) {
  //    console.log('update Client before auth');
  //    console.log(newClientInfo.id);
