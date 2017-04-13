@@ -1,4 +1,4 @@
-myApp.config(function($stateProvider) {
+myApp.config(function($stateProvider,$urlRouterProvider) {
   var main = {
     name: 'main',
     url: '/main',
@@ -8,21 +8,31 @@ myApp.config(function($stateProvider) {
   };
   var login = {
     name: 'login',
+    url: '/login',
     controller: 'LoginController',
     controllerAs: 'lc',
     templateUrl:'/views/login.html'
   };
   var welcome = {
     name: 'welcome',
+    url: '/welcome',
     controller: 'WelcomeController',
     controllerAs: 'wc',
     templateUrl:'/views/welcome.html'
   };
   var profile = {
     name: 'profile',
+    url: '/profile',
     controller: 'ProfileController',
     controllerAs: 'pc',
     templateUrl:'/views/profile.html'
+  };
+  var mainState = {
+    name: 'main',
+    url: '/main',
+    controlller: 'MainController',
+    controllerAs: 'mc',
+    templateUrl: '/views/mainstate.html'
   };
   var budget = {
     name: 'main.budget',
@@ -119,4 +129,6 @@ myApp.config(function($stateProvider) {
   $stateProvider.state(creditReportTwo);
   $stateProvider.state(creditReportThree);
   $stateProvider.state(summary);
+
+  $urlRouterProvider.when('', '/login');
 });
