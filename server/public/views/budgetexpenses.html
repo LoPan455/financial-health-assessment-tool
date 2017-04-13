@@ -1,2 +1,32 @@
-<p>This is Budget Expenses</p>
 <p>{{bec.user}}</p>
+
+<h1>Monthly Expenses</h1>
+
+<h2>Housing</h2>
+
+  <p>Rent (monthly payment)
+  <input ng-model="bic.user.monthlyRent" placeholder="$" type="number"></p>
+  <p>Renters Insurance (monthly payment)
+    <input ng-model="bic.user.monthlyRentersInsurance" placeholder="$" type="number"></p>
+  <p>Number of mortgages on primary residence
+    <input ng-model="bic.user.numberOfMortgages" placeholder="$" type="number"></p>
+  <p>Mortgage 1 - Primary Residence (monthly payment)
+    <input ng-model="bic.user.monthlyMortgage1" placeholder="$" type="number"></p>
+  <p>Mortgage 2, 3, etc. - Primary Residence (combined monthly payment)
+    <input ng-model="bic.user.monthlyMortgage2" placeholder="$" type="number"></p>
+  <p>HELOC(s) - Primary Residence (monthly payment)
+    <input ng-model="bic.user.monthlyHeloc" placeholder="$" type="number"></p>
+  <p>Property Tax if not included in mortgage (monthly payment)
+    <input ng-model="bic.user.monthlyPropertyTaxIfNotInMortgage" placeholder="$" type="number"></p>
+  <p>Homeowners Insurance (monthly payment)
+    <input ng-model="bic.user.monthlyHomeownersInsurance" placeholder="$" type="number"></p>
+  <p>Home Maintenance (monthly estimate, pro-rated)
+    <input ng-model="bic.user.monthlyHomeMaintenance" placeholder="$" type="number"></p>
+  <p>Condo/Townhome Fees or Assessments (monthly payment)
+    <input ng-model="bic.user.monthlyCondoTownhomeFees" placeholder="$" type="number"></p>
+  <p>Real Estate Other than Primary Residence (monthly payment)
+    <input ng-model="bic.user.monthlyOtherRealEstate" placeholder="$" type="number"></p>
+  <p>Other Housing Expenses (monthly payment)
+    <input ng-model="bic.user.monthlyOtherHousingExpenses" placeholder="$" type="number"></p>
+<h2>Total Housing Expenses
+  <input ng-model="bic.user.monthlyTotalHousingExpenses" placeholder="$" type="number"></h2>
