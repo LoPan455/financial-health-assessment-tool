@@ -15,15 +15,24 @@ myApp.config(function($stateProvider,$urlRouterProvider) {
   };
   var welcome = {
     name: 'welcome',
+    url: '/welcome',
     controller: 'WelcomeController',
     controllerAs: 'wc',
     templateUrl:'/views/welcome.html'
   };
   var profile = {
     name: 'profile',
+    url: '/profile',
     controller: 'ProfileController',
     controllerAs: 'pc',
     templateUrl:'/views/profile.html'
+  };
+  var mainState = {
+    name: 'main',
+    url: '/main',
+    controlller: 'MainController',
+    controllerAs: 'mc',
+    templateUrl: '/views/mainstate.html'
   };
   var budget = {
     name: 'main.budget',
