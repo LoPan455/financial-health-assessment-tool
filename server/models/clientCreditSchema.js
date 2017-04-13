@@ -1,4 +1,4 @@
-/*var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var clientBudgetSchema = new Schema({
@@ -313,4 +313,3 @@ civilJudgmentsPublicRecordsTaxLiens
 delinquencies30Day
 delinquencies60Day
 delinquencies90Day
-*/
