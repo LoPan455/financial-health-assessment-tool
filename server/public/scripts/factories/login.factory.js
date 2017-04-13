@@ -1,4 +1,4 @@
-app.factory('LogonFactory', [
+app.factory('LoginFactory', [
   '$http',
   '$firebaseAuth',
   '$location',
@@ -8,9 +8,6 @@ app.factory('LogonFactory', [
     var auth = $firebaseAuth();
     var loggedInUser = {};
 
-    // if (idTo)
-    // ng-if for log in
-    // ng-if for accessing html page
 
     function logIn() {
       console.log('logIn is clicked');
@@ -28,6 +25,7 @@ app.factory('LogonFactory', [
       if (firebaseUser) {
         firebaseUser.getToken().then(function(idToken) {
           getUserEmail(idToken);
+          $location.url('/welcome');
         });
       } else {
         console.log('$onAuthStateChanged logged out');
@@ -44,6 +42,7 @@ app.factory('LogonFactory', [
       }).then(function(response) {
         console.log('response from server: ', response.data);
         loggedInUser.user = response.data;
+        $location
       });
     }
 
