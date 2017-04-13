@@ -1,6 +1,4 @@
 node_modules/
-<<<<<<< HEAD
-server/firebase-service-account.json
-=======
 refactoredFiles/
->>>>>>> develop
+firebase-service-account.json
+

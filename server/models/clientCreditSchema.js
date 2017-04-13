@@ -19,6 +19,7 @@ creditReportErrors: { type: Boolean },
 //// CREDIT REPORT
 ablePullCreditReport: { type: Boolean },
 // Add textArea or string for user notes??
+pullCreditReport: { type: String },
 // ❑ Yes, report(s) available
 // ❑ No report/score available – agency could not access Business report
 // ❑ No report/score available – client could not access Consumer report
@@ -59,108 +60,93 @@ TransUnionAuthEverySixMnths: { type: Boolean },
 TransUnionAuthEveryFiveYears: { type: Boolean },
 TransUnionAuthEveryRefusedSign: { type: Boolean },
 
-Withdrew multi-pull authorization (every 6 months for 5 years)
+WithdrewMultipullAuthEverySixMonthsFiveYears
 
-TransUnion Type of Report
-Single Bureau (Business)
-Tri-Merge (Business)
+TransUnionReportType
+SingleBureauBusiness
+TriMergeBusiness
 Consumer
 
-TransUnion FICO Score Status
-Did not attempt to pull score
-Got score
-No score available (insufficient credit history
-NoScoreAvailableNoCredit history
+TransUnionFICOScoreStatus
+DidNotAttemptPullScore
+GotScore
+NoScoreAvailableLowOrNoCreditHistory
+TransUnionFICOScore
 
-TransUnionFICOScore: _____________
+TransUnionNonFICOScoreStatus
+DidNotAttemptPullScore
+GotScore
+NoScoreAvailableLowOrNoCreditHistory
+TransUnionNon-FICOScoreType
 
-TransUnion Non-FICO Score Status
+VantageScore: { type: Number },
+TransRiskScore: { type: Number },
+CreditXpert: { type: Number },
+CEScore: { type: Number },
+Other: { type: String },
+TransUnionNonFicoScore: { type: Number },
+
+//// Other Bureau: ____________________________________
+OtherBureauAuthStatus
+Every 6 months for 5 years
+One time only
+Refused to sign
+Withdrew multi-pull authorization (every 6 months for 5 years
+N/A
+
+Other Bureau Type of Report
+Single Bureau (Business
+Tri-Merge (Business
+Consumer
+
+Other Bureau FICO Score Status
 Did not attempt to pull score
 Got score
 No score available (insufficient credit history
 No score available (reasons other than insufficient credit history)
-TransUnion Non-FICO Score Type:
-VantageScore
-TransRisk Score
-CreditXpert
-CE Score
-Other
-TransUnion Non-FICO Score: ______________
 
-//// Other Bureau: ____________________________________
-Other Bureau Authorization Status:    ❑ Every 6 months for 5 years       ❑ One time only      ❑ Refused to sign
-❑ Withdrew multi-pull authorization (every 6 months for 5 years)    ❑ N/A
-Other Bureau Type of Report:          ❑ Single Bureau (Business)         ❑ Tri-Merge (Business)         ❑ Consumer
-Other Bureau FICO Score Status:   ❑ Did not attempt to pull score    ❑ Got score
-❑ No score available (insufficient credit history)         ❑ No score available (reasons other than insufficient credit history)
-Other Bureau FICO Score: _____________
-Other Bureau Non-FICO Score Status:    ❑ Did not attempt to pull score       ❑ Got score
-❑ No score available (insufficient credit history)         ❑ No score available (reasons other than insufficient credit history)
-Other Bureau Non-FICO Score Type:       ❑ VantageScore       ❑ TransRisk Score       ❑ CreditXpert      ❑ CE Score
-❑ Other
-Other Bureau Non-FICO Score: ______________
+Other Bureau FICO Score
+Other Bureau Non-FICO Score Status
+Did not attempt to pull score
+Got score
+No score available (insufficient credit history)
+No score available (reasons other than insufficient credit history)
+
+Other Bureau Non-FICO Score Type: { type: Number },
+VantageScore: { type: Number },
+TransRisk Score: { type: Number },
+CreditXpert: { type: Number },
+CE Score: { type: Number },
+Other: { type: Number },
+Other Bureau Non-FICO Score: { type: Number },
 
 //// ACTIVE LINES OF CREDIT
-How many active lines of credit does the participant have? __________
-	How many are active installment loans? _______     How many are active revolving lines of credit? _______
+qtyActiveLinesCredit: { type: Number },
+qtyActiveInstallmentLoans: { type: Number },
+qtyActiveRevolvingLinesCredit: { type: Number },
 
-//// TABLE:   REVOLVING ACCOUNTS – ACTIVE CREDIT CARDS
-<thead>
-<tr>
-  <td> (blank)
-  <td> Name of Credit Card
-  <td> Total Limit
-  <td> Account Balance
-  <td> Amount Past Due
-</tr>
-
-<tbody>
-<tr>
-  <td> CC1
-  <td> (blank input for name)
-  <td> $
-  <td> $
-  <td> $
-</tr>
-
-**NOTE: above: there are 9 rows: CC2, CC3, etc. up to CC9
+//// REVOLVING ACCOUNTS – ACTIVE CREDIT CARDS
+CreditCardName: { type: String },
+Limit: { type: Number },
+AcctBalance: { type: Number },
+AmtPastDue: { type: Number },
 
 ///// new TABLE:  REVOLVING ACCOUNTS – HOME EQUITY LINES OF CREDIT (HELOCs)
+NameOfHELOC: { type: String },
+TotalLimit: { type: Number },
+AccountBalance: { type: Number },
+AmountPastDue: { type: Number },
 
-<thead>
-<tr>
-  <td> (blank)
-  <td> Name of HELOC
-  <td> Total Limit
-  <td> Account Balance
-  <td> Amount Past Due
-</tr>
-
-<tbody>
-<tr>
-  <td> HELOC 1
-  <td> (blank input for name)
-  <td> $
-  <td> $
-  <td> $
-</tr>
-
-(Variables) NotYet-{COPIED}
-
-
-
-
-foreclosureLastSeven
-recentForeclosureDate
-bankruptcyLastTen
+foreclosureLastSevenYrs: { type: Number },
+recentForeclosureDate: { type: Date },
+bankruptcyLastTen: { type: Number },
 recentBankruptcyDate: { type: Date },
-collectionsChargeOffs-General
-collectionsChargeOffs-Medical
-civilJudgmentsPublicRecordsTaxLiens
-delinquencies30Day
-delinquencies60Day
-delinquencies90Day
-
+collectionsChargeOffs-General: { type: Number },
+collectionsChargeOffs-Medical: { type: Number },
+civilJudgmentsPublicRecordsTaxLiens: { type: Number },
+delinquencies30Day: { type: Number },
+delinquencies60Day: { type: Number },
+delinquencies90Day: { type: Number },
 
 });
 
