@@ -1,4 +1,4 @@
-myApp.controller('WelcomeController', function(ClientFactory) {
+fhatApp.controller('WelcomeController', function(ClientFactory) {
   console.log('WelcomeController controller running');
   var self = this;
   this.user = {};

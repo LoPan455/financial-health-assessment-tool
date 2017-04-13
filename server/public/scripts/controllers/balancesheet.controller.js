@@ -1,5 +1,5 @@
-myApp.controller('BalanceSheetController', function(ClientFactory) {
+fhatApp.controller('BalanceSheetController', function(ClientFactory) {
   console.log('BalanceSheetController controller running');
   var self = this;
-    this.user = {};
+    self.user = ClientFactory.client;
 });//end app.controller
