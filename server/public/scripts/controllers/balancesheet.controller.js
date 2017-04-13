@@ -1,4 +1,4 @@
-fhatApp.controller('BalanceSheetController', function(ClientFactory) {
+app.controller('BalanceSheetController', function(ClientFactory) {
   console.log('BalanceSheetController controller running');
   var self = this;
     this.user = {};

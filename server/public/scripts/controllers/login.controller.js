@@ -1,4 +1,4 @@
-fhatApp.controller('LoginController', function(ClientFactory) {
+app.controller('LoginController', function(ClientFactory) {
   console.log('LoginController controller running');
   var self = this;
   this.user = {};
