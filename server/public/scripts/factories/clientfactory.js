@@ -1,4 +1,4 @@
-myApp.factory('ClientFactory', ['$http', function($http) {
+fhatApp.factory('ClientFactory', ['$http', function($http) {
 
 var client = {};
  //  function updateClientData(newClientInfo) {

@@ -1,4 +1,4 @@
-myApp.controller('ProfileController', function(ClientFactory) {
+fhatApp.controller('ProfileController', function(ClientFactory) {
   console.log('ProfileController controller running');
   var self = this;
 
