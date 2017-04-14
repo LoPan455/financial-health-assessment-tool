@@ -1,4 +1,3 @@
-node_modules/
-refactoredFiles/
-firebase-service-account.json
 .DS_Store
+firebase-service-account.json
+node_modules/
