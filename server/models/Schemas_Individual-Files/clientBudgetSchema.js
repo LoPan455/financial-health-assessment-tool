@@ -4,59 +4,50 @@ var Schema = mongoose.Schema;
 var clientBudgetSchema = new Schema({
 // email: { type: String, require: true, unique: true },
 
+// BUDGET SHEETS
 // budgetAssessment_label
-	clientName: { type: String },
-	assessmentDate: { type: Date },
-	onlyYouOrWholeHousehold_question: { type: Boolean },
-	checkingBalanceValue: { type: Number },
+// clientName: { type: String },
+// assessmentDate: { type: Date },
 
-onlyYouOrWholeHousehold_question { type: Boolean },
-// onlyYou_answer
-// wholeHousehold_answer
-
-firstSheetCreated_question { type: Boolean },
-// firstSheetYes_answer
-// firstSheetNo_answer
-
-partialOrCompleteUpdate_question { type: Boolean },
-// partialUpdate_answer
-// completeUpdate_answer
-
-netOrGrossAndNet_question { type: Boolean },
-// netIncomeOnly_answer
-// netAndGrossIncome_answer
+budgetOnlyYou: { type: Boolean },
+budgetWholeHousehold: { type: Boolean },
+firstBudgetCreated: { type: Boolean },
+updatePartial: { type: Boolean },
+updateComplete: { type: Boolean },
+incomeNet: { type: Boolean },
+incomeGross: { type: Boolean },
 
 // monthlyIncome_label
-	monthlyWagesNet: { type: Number },
-	monthlyWagesGross: { type: Number },
-	monthlySelfAndBusinessNet: { type: Number },
-	monthlySelfAndBusinessGross: { type: Number },
-	monthlyNetSSI: { type: Number },
-	monthlyGrossSSI: { type: Number },
-	monthlyNetSNAPWIC: { type: Number },
-	monthlyGrossSNAPWIC: { type: Number },
-	monthlyAlimonyNet: { type: Number },
-	monthlyAlimonyGross: { type: Number },
-	monthlyUnemploymentNet: { type: Number },
-	monthlyUnemploymentGross: { type: Number },
-	monthlyWorkersCompensationNet: { type: Number },
-	monthlyWorkersCompensationGross: { type: Number },
-	monthlyVeteransCompensationNet: { type: Number },
-	monthlyVeteransCompensationGross: { type: Number },
-	monthlyRentalIncomeNet: { type: Number },
-	monthlyRentalIncomeGross: { type: Number },
-	monthlyInvestmentIncomeNet: { type: Number },
-	monthlyInvestmentIncomeGross: { type: Number },
-	monthlyIncomeOtherHouseholdMembersNet: { type: Number },
-	monthlySocialSecurityNetNotSSI: { type: Number },
-	monthlySocialSecurityGrossNotSSI: { type: Number },
-	monthlyPensionsNet: { type: Number },
-	monthlyPensionsGross: { type: Number },
-	monthlyOtherPublicBenefitsNet: { type: Number },
-	monthlyOtherIncomeNet: { type: Number },
-	monthlyOtherIncomeGross: { type: Number },
-	totalMonthlyIncomeNet: { type: Number },
-	totalMonthlyIncomeGross: { type: Number },
+monthlyWagesNet: { type: Number },
+monthlyWagesGross: { type: Number },
+monthlySelfAndBusinessNet: { type: Number },
+monthlySelfAndBusinessGross: { type: Number },
+monthlyNetSSI: { type: Number },
+monthlyGrossSSI: { type: Number },
+monthlyNetSNAPWIC: { type: Number },
+monthlyGrossSNAPWIC: { type: Number },
+monthlyAlimonyNet: { type: Number },
+monthlyAlimonyGross: { type: Number },
+monthlyUnemploymentNet: { type: Number },
+monthlyUnemploymentGross: { type: Number },
+monthlyWorkersCompensationNet: { type: Number },
+monthlyWorkersCompensationGross: { type: Number },
+monthlyVeteransCompensationNet: { type: Number },
+monthlyVeteransCompensationGross: { type: Number },
+monthlyRentalIncomeNet: { type: Number },
+monthlyRentalIncomeGross: { type: Number },
+monthlyInvestmentIncomeNet: { type: Number },
+monthlyInvestmentIncomeGross: { type: Number },
+monthlyIncomeOtherHouseholdMembersNet: { type: Number },
+monthlySocialSecurityNetNotSSI: { type: Number },
+monthlySocialSecurityGrossNotSSI: { type: Number },
+monthlyPensionsNet: { type: Number },
+monthlyPensionsGross: { type: Number },
+monthlyOtherPublicBenefitsNet: { type: Number },
+monthlyOtherIncomeNet: { type: Number },
+monthlyOtherIncomeGross: { type: Number },
+totalMonthlyIncomeNet: { type: Number },
+totalMonthlyIncomeGross: { type: Number },
 
 // monthlyExpenses_label
 // housing_label
@@ -157,7 +148,7 @@ totalMonthlyIncome: { type: Number },
 totalMonthlyExpenses: { type: Number },
 totalMonthlyNetIncome: { type: Number },
 
-budgetAssessmentNotes: { type: Number },
+budgetAssessmentNotes: { type: Number }
 
 });
 
