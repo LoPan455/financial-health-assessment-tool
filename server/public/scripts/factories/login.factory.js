@@ -19,7 +19,7 @@ app.factory('LoginFactory', [
         .catch(function(error) {
           console.log('firebaseUser authentication failed: ', error);
         });
-    };
+    }
 
     auth.$onAuthStateChanged(function(firebaseUser) {
       console.log('auth change trigger');
@@ -54,7 +54,7 @@ app.factory('LoginFactory', [
 
         $location.url('/login');
       });
-    };
+    }
 
     return {
       logIn: logIn,

@@ -1,4 +1,6 @@
+
 app.factory('ClientFactory', ['$http', function($http) {
+
 
 var client = {};
  //  function updateClientData(newClientInfo) {

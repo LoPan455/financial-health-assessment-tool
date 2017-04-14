@@ -1,4 +1,6 @@
+
 app.controller('BudgetExpensesController', function(ClientFactory) {
+
   console.log('BudgetExpensesController controller running');
   var self = this;
 
