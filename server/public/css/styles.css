@@ -22,3 +22,15 @@
   background-image: url('../assets/blue-gradient-background-wallpaper-1.jpg');
   background-color: blue;
 }
+
+/*Balance sheet input sections*/
+.inputFieldSize {
+  min-width: 300px;
+  margin-right: 15px;
+  padding-right: 10px;
+}
+
+#informalField {
+  min-width: 350px;
+  margin-right: 15px;
+}

@@ -4,12 +4,12 @@ app.controller('BalanceSheetController', function(ClientFactory) {
   var self = this;
     self.user = ClientFactory.client;
 
-    // test variable
+    // test variables
     self.user.numberVehicles = 2;
     self.user.housing = 'Own';
     self.user.otherRealEstateValue = 1;
-    self.user.heloc = true; 
-
+    self.user.heloc = true;
+    //
     self.housingSum = 0;
     addHousing();
 
