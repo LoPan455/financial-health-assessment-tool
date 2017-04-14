@@ -1,24 +1,35 @@
-.selectdemoSelectHeader {
-  /* Please note: All these selectors are only applied to children of elements with the 'selectdemoSelectHeader' class */ }
-  .selectdemoSelectHeader .demo-header-searchbox {
-    border: none;
-    outline: none;
-    height: 100%;
-    width: 100%;
-    padding: 0; }
-  .selectdemoSelectHeader .demo-select-header {
-    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12);
-    padding-left: 10.667px;
-    height: 48px;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: auto; }
-  .selectdemoSelectHeader md-content._md {
-    max-height: 240px; }
+body {
+      /*  #414132  iimn navbar brown*/
+      /*  #FBFBF5 iimn light background*/
+      /*  #E65314 iimn accent orange*/
+      /*  #7AC043 iimn tree light green*/
+      /*  #8B9238 iimn tree olive green*/
+      /*  #D6DE23  iimn tree gold */
+      /*  #EBEACC  iimn body accent tan */
+
+      background: #fafae1 url(images/map2.png);
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+.toolbar{
+  background-image: url(images/iimn-logo2.svg), url(images/map.png);
+      background-position: left top, right bottom;
+      background-repeat: no-repeat, no-repeat;
+}
 
 .login-screen {
   background-image: url('../assets/blue-gradient-background-wallpaper-1.jpg');
-  background-color: blue;
+  background-color: #EBEACC;
 }
+
+/*.sample-show-hide {
+  transition: all linear 0.1s;
+}
+.sample-show-hide.ng-hide {
+  opacity: 0;
+}
+
+.sample-show-hide.ng-show {
+  opacity: 1;
+}*/
