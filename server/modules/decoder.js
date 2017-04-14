@@ -3,7 +3,7 @@ var serviceAccount = require("../firebase-service-account.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://fhat-iimn.firebaseio.com"
+  databaseURL: "https://fhat-iimn-95572.firebaseio.com"
 });
 
 var tokenDecoder = function(req, res, next) {
