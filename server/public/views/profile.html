@@ -2,7 +2,7 @@
   <md-content layout-gt-sm="row" layout-padding>
     <div>
 
-      <div ng-hide="pc.user.maritalStatus === 'single' || (pc.user.maritalStatus === 'married' && pc.user.individual != null)"> <!--Individual or Joint section -->
+      <div class="sample-show-hide" ng-hide="pc.user.maritalStatus === 'single' || (pc.user.maritalStatus === 'married' && pc.user.individual != null)"> <!--Individual or Joint section -->
         <md-radio-group ng-model="pc.user.maritalStatus">
           <h2>Are you married?</h2>
           <md-radio-button ng-value="'married'">Yes</md-radio-button>
@@ -16,7 +16,10 @@
         </md-radio-group>
       </div>
 
-      <div ng-if="pc.user.maritalStatus === 'single' || (pc.user.maritalStatus === 'married' && pc.user.individual != null)" ng-hide="pc.user.dependents != null"> <!--Dependents section -->
+
+
+
+      <div class="sample-show-hide" ng-if="pc.user.maritalStatus === 'single' || (pc.user.maritalStatus === 'married' && pc.user.individual != null)" ng-hide="pc.user.dependents != null"> <!--Dependents section -->
         <md-radio-group ng-model="pc.user.dependents">
           <h2>Do you have any children or dependents?</h2>
           <md-radio-button ng-value="true">Yes</md-radio-button>
@@ -26,7 +29,7 @@
       </div>
 
 
-      <div ng-if="pc.user.dependents != null" ng-hide="pc.user.employed != null"> <!--Employment section -->
+      <div class="sample-show-hide" ng-if="pc.user.dependents != null" ng-hide="pc.user.employed != null"> <!--Employment section -->
         <md-radio-group ng-model="pc.user.employed">
           <h2>Are you employed?</h2>
           <md-radio-button ng-value="true">Yes</md-radio-button>
@@ -36,7 +39,7 @@
       </div>
 
 
-      <div ng-if="pc.user.employed != null" ng-hide="pc.user.assistance == false || !pc.assistanceSection"> <!--Assistance section -->
+      <div class="sample-show-hide" ng-if="pc.user.employed != null" ng-hide="pc.user.assistance == false || !pc.assistanceSection"> <!--Assistance section -->
         <md-radio-group ng-model="pc.user.assistance">
           <h2>Do you receive assistance?</h2>
           <md-radio-button ng-value="true">Yes</md-radio-button>
@@ -44,7 +47,7 @@
         </md-radio-group>
         <button type="button" ng-click="pc.user.employed = null">Back</button>
 
-        <div ng-if="pc.user.assistance == true" class="pc.assistanceSection">
+        <div class="sample-show-hide" ng-if="pc.user.assistance == true" class="pc.assistanceSection">
           <md-checkbox md-no-ink class="md-primary" ng-model="pc.user.SNAP">SNAP</md-checkbox>
           <md-checkbox md-no-ink class="md-primary" ng-model="pc.user.TANF">TANF</md-checkbox>
           <md-checkbox md-no-ink class="md-primary" ng-model="pc.user.SSI">SSI/SSDI</md-checkbox>
@@ -55,7 +58,7 @@
         </div>
       </div>
 
-      <div ng-if="pc.user.assistance == false || !pc.assistanceSection" ng-hide="pc.user.housing != null"> <!--Housing section -->
+      <div class="sample-show-hide" ng-if="pc.user.assistance == false || !pc.assistanceSection" ng-hide="pc.user.housing != null"> <!--Housing section -->
         <md-radio-group ng-model="pc.user.housing">
           <h2>Do you rent or own your home?</h2>
           <md-radio-button ng-value="'Rent'">Rent</md-radio-button>
@@ -64,14 +67,14 @@
         <button type="button" ng-click="pc.confirmAssistance()">Back</button>
       </div>
 
-      <div ng-if="pc.user.housing != null" ng-hide="pc.user.vehicle == false|| pc.user.numberVehicles != null"> <!--Vehicle section -->
+      <div class="sample-show-hide" ng-if="pc.user.housing != null" ng-hide="pc.user.vehicle == false|| pc.user.numberVehicles != null"> <!--Vehicle section -->
         <md-radio-group ng-model="pc.user.vehicle">
           <h2>Do you own a vehicle?</h2>
           <md-radio-button ng-value="true">Yes</md-radio-button>
           <md-radio-button ng-value="false">No</md-radio-button>
         </md-radio-group>
 
-        <div ng-if="pc.user.vehicle == true">
+        <div class="sample-show-hide" ng-if="pc.user.vehicle == true">
           <h3>How many vehicles do you own?</h3>
         <md-select ng-model="pc.user.numberVehicles" placeholder="Number of Vehicles">
           <md-option value=1>1</md-option>
@@ -82,7 +85,7 @@
         <button type="button" ng-click="pc.user.housing = null">Back</button>
       </div>
 
-      <div ng-class="pc.bankSection" ng-if="pc.user.vehicle == false|| pc.user.numberVehicles != null" ng-hide="pc.user.bank == false || !pc.bankSection">
+      <div class="sample-show-hide" ng-class="pc.bankSection" ng-if="pc.user.vehicle == false|| pc.user.numberVehicles != null" ng-hide="pc.user.bank == false || !pc.bankSection">
         <md-radio-group ng-model="pc.user.bank">
           <h2>Have you owned a checking or savings account?</h2> <!-- consider revising to checkboxes -->
           <md-radio-button ng-value="true">Yes</md-radio-button>
@@ -109,7 +112,7 @@
         <button type="button" ng-click="pc.hideBank()">Back</button>
       </div>
 
-      <div ng-if="!pc.productSection">
+      <div class="sample-show-hide" ng-if="!pc.productSection">
         <p>Marital Status:{{pc.user.maritalStatus}}</p>
         <p ng-hide="pc.user.maritalStatus === 'single'">Single Filing: {{pc.user.individual}}</p>
         <p>Dependents: {{pc.user.dependents}}</p>
