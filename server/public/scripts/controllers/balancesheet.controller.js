@@ -8,6 +8,7 @@ app.controller('BalanceSheetController', function(ClientFactory) {
     self.user.numberVehicles = 2;
     self.user.housing = 'Own';
     self.user.otherRealEstateValue = 1;
+    self.user.heloc = true; 
 
     self.housingSum = 0;
     addHousing();

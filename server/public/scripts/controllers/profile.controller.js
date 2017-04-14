@@ -1,5 +1,5 @@
 app.controller('ProfileController', function(ClientFactory) {
-  
+
   console.log('ProfileController controller running');
   var self = this;
 
@@ -9,7 +9,7 @@ app.controller('ProfileController', function(ClientFactory) {
     self.assistanceSection = !self.assistanceSection;
   };
 
-  self.undoMarrige = function() {
+  self.undoMarriage = function() {
     // console.log('mawige is what bwings us together');
     if (self.user.maritalStatus === 'single') {
       self.user.maritalStatus = null;
