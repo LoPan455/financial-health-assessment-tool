@@ -49,16 +49,21 @@ Experian Non-FICO Score: ______________
 
 ////  TransUnion
 TransUnion Authorization Status:    ❑ Every 6 months for 5 years       ❑ One time only      ❑ Refused to sign
+
 ❑ Withdrew multi-pull authorization (every 6 months for 5 years)    ❑ N/A
+
 TransUnion Type of Report:          ❑ Single Bureau (Business)         ❑ Tri-Merge (Business)         ❑ Consumer
+
 TransUnion FICO Score Status:   ❑ Did not attempt to pull score    ❑ Got score
 ❑ No score available (insufficient credit history)         ❑ No score available (reasons other than insufficient credit history)
 TransUnion FICO Score: _____________
+
 TransUnion Non-FICO Score Status:    ❑ Did not attempt to pull score       ❑ Got score
 ❑ No score available (insufficient credit history)         ❑ No score available (reasons other than insufficient credit history)
-TransUnion Non-FICO Score Type:       ❑ VantageScore       ❑ TransRisk Score       ❑ CreditXpert      ❑ CE Score
-❑ Other
+TransUnion Non-FICO Score Type:       ❑ VantageScore       ❑ TransRisk Score       ❑ CreditXpert      ❑ CE Score      ❑ Other
 TransUnion Non-FICO Score: ______________
+
+
 
 //// Other Bureau: ____________________________________
 Other Bureau Authorization Status:    ❑ Every 6 months for 5 years       ❑ One time only      ❑ Refused to sign
