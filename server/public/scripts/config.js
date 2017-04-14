@@ -1,11 +1,10 @@
-
-  // Initialize Firebase
+  // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyBN8zA9fOAVYi7Qt_iIua9_kXJdEcwZnzY",
-    authDomain: "fhat-iimn.firebaseapp.com",
-    databaseURL: "https://fhat-iimn.firebaseio.com",
-    projectId: "fhat-iimn",
-    storageBucket: "fhat-iimn.appspot.com",
-    messagingSenderId: "1084163733569"
-  };
-  firebase.initializeApp(config);
+      apiKey: "AIzaSyBOg9vJCz0Zk6VTrRnW-n4lmxMXZkSDxXs",
+      authDomain: "fhat-iimn-95572.firebaseapp.com",
+      databaseURL: "https://fhat-iimn-95572.firebaseio.com",
+      projectId: "fhat-iimn-95572",
+      storageBucket: "fhat-iimn-95572.appspot.com",
+      messagingSenderId: "199190649469"
+  };
+  firebase.initializeApp(config);
