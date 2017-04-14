@@ -27,13 +27,7 @@ app.config(function($stateProvider,$urlRouterProvider) {
     controllerAs: 'pc',
     templateUrl:'/views/profile.html'
   };
-  var mainState = {
-    name: 'main',
-    url: '/main',
-    controlller: 'MainController',
-    controllerAs: 'mc',
-    templateUrl: '/views/mainstate.html'
-  };
+
   var budget = {
     name: 'main.budget',
     controller: 'BudgetController',
