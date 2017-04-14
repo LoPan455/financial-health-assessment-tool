@@ -9,6 +9,7 @@ Do you want the budget to reflect just your own finances or the finances of your
 Is this the first budget created for this participant?  == firstSheetCreated_question  ***(possibly repeated data)
 	___ Yes == firstSheetYes_answer  ***(possibly repeated data)
 	___ No == firstSheetNo_answer  ***(possibly repeated data)
+	
 	Is this a partial or complete update of the budget? == partialOrCompleteUpdate_question  ***(possibly repeated data)
 			___ Partial update == partialUpdate_answer  ***(possibly repeated data)
 			___ Complete update == completeUpdate_answer ***(possibly repeated data)
