@@ -1,4 +1,3 @@
-
 app.config(function($stateProvider,$urlRouterProvider) {
 
   var main = {
@@ -66,23 +65,23 @@ app.config(function($stateProvider,$urlRouterProvider) {
     controllerAs: 'bsc',
     templateUrl: '/views/balancesheet.html'
   };
-  var balanceSheetOne = {
-    name: 'main.balanceSheet.one',
+  var balanceSheetAssets = {
+    name: 'main.balanceSheet.assets',
     controller: 'BalanceSheetController',
     controllerAs: 'bsc',
-    templateUrl: '/views/balancesheetone.html'
+    templateUrl: '/views/balancesheetAssets.html'
   };
-  var balanceSheetTwo = {
-    name: 'main.balanceSheet.two',
+  var balanceSheetLiabilities = {
+    name: 'main.balanceSheet.liabilities',
     controller: 'BalanceSheetController',
     controllerAs: 'bsc',
-    templateUrl: '/views/balancesheettwo.html'
+    templateUrl: '/views/balancesheetLiabilities.html'
   };
-  var balanceSheetThree = {
-    name: 'main.balanceSheet.three',
+  var balanceSheetSnapshot = {
+    name: 'main.balanceSheet.snapshot',
     controller: 'BalanceSheetController',
     controllerAs: 'bsc',
-    templateUrl: '/views/balancesheetthree.html'
+    templateUrl: '/views/balancesheetSnapshot.html'
   };
   var creditReport = {
     name: 'main.creditReport',
@@ -123,9 +122,9 @@ app.config(function($stateProvider,$urlRouterProvider) {
   $stateProvider.state(budgetExpenses);
   $stateProvider.state(budgetThree);
   $stateProvider.state(balanceSheet);
-  $stateProvider.state(balanceSheetOne);
-  $stateProvider.state(balanceSheetTwo);
-  $stateProvider.state(balanceSheetThree);
+  $stateProvider.state(balanceSheetAssets);
+  $stateProvider.state(balanceSheetLiabilities);
+  $stateProvider.state(balanceSheetSnapshot);
   $stateProvider.state(creditReport);
   $stateProvider.state(creditReportOne);
   $stateProvider.state(creditReportTwo);

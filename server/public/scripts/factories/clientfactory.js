@@ -1,4 +1,3 @@
-
 app.factory('ClientFactory', ['$http', function($http) {
 
 

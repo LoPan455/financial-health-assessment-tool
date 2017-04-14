@@ -1,4 +1,3 @@
-
 app.controller('CreditReportController', function(ClientFactory) {
 
   console.log('CreditReportController controller running');

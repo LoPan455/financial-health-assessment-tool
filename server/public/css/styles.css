@@ -23,6 +23,7 @@ body {
   background-color: #EBEACC;
 }
 
+
 /*.sample-show-hide {
   transition: all linear 0.1s;
 }
@@ -33,3 +34,15 @@ body {
 .sample-show-hide.ng-show {
   opacity: 1;
 }*/
+
+/*Balance sheet input sections*/
+.inputFieldSize {
+  min-width: 300px;
+  margin-right: 15px;
+  padding-right: 10px;
+}
+
+#informalField {
+  min-width: 350px;
+  margin-right: 15px;
+}

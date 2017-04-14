@@ -1,4 +1,3 @@
-
 app.controller('MainStateController', function(ClientFactory) {
 
   console.log('MainStateController controller running');

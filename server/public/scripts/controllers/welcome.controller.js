@@ -1,4 +1,3 @@
-
 app.controller('WelcomeController', function($location,ClientFactory,LoginFactory) {
 
   console.log('WelcomeController controller running');
