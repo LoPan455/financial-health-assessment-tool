@@ -1,4 +1,6 @@
+
 app.config(function($stateProvider,$urlRouterProvider) {
+
   var main = {
     name: 'main',
     url: '/main',

@@ -1,3 +1,4 @@
+
 app.controller('ProfileController', function(ClientFactory) {
   console.log('ProfileController controller running');
   var self = this;
@@ -29,7 +30,7 @@ app.controller('ProfileController', function(ClientFactory) {
 
   self.clearAccounts = function(){
     self.user.checking = false;
-    self.user.savings = false; 
+    self.user.savings = false;
   };
 
   self.productSection = true;
